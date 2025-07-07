@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div#ligar {
+            margin-top: 200px;
+            border: 5px solid black;
+            font: normal 20pt arial;
+            background: rgb(1, 112, 7);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        div#desligar {
+            margin-left: 10px;
+            margin-top: 200px;
+            border: 5px solid black;
+            font: normal 20pt arial;
+            background: rgb(1, 112, 7);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body id="body">
+    <div class="container">
+        <div id="ligar" onclick="clicar1()" onmouseout="sair1()">
+            Ligar fundo
+        </div>
+        <div id="desligar" onclick="clicardesligar()" onmouseout="sairdesligar()">
+            Desligar fundo
+        </div>
+
+    </div>
+
+    <script>
+        var a = document.getElementById('ligar')
+        var a2 = document.getElementById('desligar')
+        var b = document.getElementById('body')
+
+        function clicar1() {
+            a.innerText = "Fundo Ligado!"
+            b.style.backgroundColor = "blue"
+        }
+
+        function sair1() {
+            a.innerText = "Ligar Fundo"
+        }
+
+        function clicardesligar() {
+            a2.innerText = "Fundo desligado"
+            b.style.backgroundColor = "white"
+        }
+
+        function sairdesligar() {
+            a2.innerText = "Desligar fundo"
+        }
+
+
+    </script>
+</body>
+</html>
