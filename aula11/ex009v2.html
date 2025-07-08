@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema De País</title>
+</head>
+<body>
+  <h1>Sistema De País</h1>
+  Digite seu país: <input type="text" id="textp">
+  <input type="button" value="Verificar" onclick="calcular()">
+  <div id="res"></div>
+  <div id="res2"></div>
+
+  <script>
+    function calcular() {
+      var txtp = document.getElementById('textp');
+      var res = document.getElementById('res');
+      var res2 = document.getElementById('res2');
+      var pais = txtp.value.trim();
+
+      res.innerHTML = `Seu país é <strong>${pais}</strong>`;
+
+      if (pais.toLowerCase() === 'brasil') {
+        res2.innerHTML = "Você é <strong>Brasileiro</strong>";
+      } else {
+        res2.innerHTML = "Você é <strong>Estrangeiro</strong>";
+      }
+    }
+  </script>
+</body>
+</html>
